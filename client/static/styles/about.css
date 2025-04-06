@@ -1,0 +1,102 @@
+.problem{
+    display: flex;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 3rem;
+
+    animation: aparecer .5s ease-out forwards;
+}
+
+.problem > .description{
+    line-height: 1.5;
+    text-align: left;
+}
+
+.problem > .img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.problem > .img > img{
+    height: 200px;
+}
+
+.objective{
+    display: flex;
+    padding: 2rem;
+    gap: 1.5rem;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 3rem;
+}
+
+.objective > .description{
+    line-height: 1.5;
+    text-align: left;
+}
+
+.objective > .img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.objective > .img > img{
+    height: 150px;
+}
+
+.achievements{
+    margin-top: 2rem;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.achievements > .obtective_list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.slider{
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+}
+
+.slider > ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 16s infinite ease-in-out;
+    align-items: center;
+}
+
+.slider > ul > li{
+    list-style: none;
+    width: 100%;
+}
+
+.slider ul > li > img{
+    width: 100%;
+}
+
+@keyframes slide {
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    95%{margin-left: -300%;}
+}

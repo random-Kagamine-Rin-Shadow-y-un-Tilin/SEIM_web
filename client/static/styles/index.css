@@ -1,0 +1,232 @@
+.welcome{
+    width: 100%;
+    height: 80vh;
+    background-image: url('../images/backround_imege.jpg');
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: overlay;
+    animation: aparecer .5s ease-out forwards;
+    margin-bottom: 3rem;
+}
+
+.welcome > .description{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 50%;
+    color: white;
+    gap: 1rem;
+}
+
+.welcome > .description > p{
+    line-height: 1.5;
+    text-align: left;
+}
+
+
+.know{
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.know > .img {
+    position: relative;
+}
+
+.know > .img > img{
+    height: 300px;
+}
+
+.know > .description{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.squere{
+    z-index: -1;
+    position:absolute;
+    height: 150px;
+    width: 150px;
+    background-color: #72149A;
+    border-radius: 50%;
+    bottom: 55%;
+    right: 55%;
+}
+
+.squere:nth-child(2){
+    top: 53%;
+    left: 55%;
+}
+
+.how_use{   
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.how_use > .description{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.how_use > .img{
+    padding: 1rem;
+    position: relative;
+}
+
+.how_use > .img > img{
+    width: 350px;
+    animation: flotar 5s infinite;
+}
+
+.line{
+    position: absolute;
+    background-color: #72149A;
+    width: 100px;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+}
+
+.line:nth-child(2){
+    right: 0%;
+}
+
+.download_squere{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.download_squere > img{
+    width: 300px;
+}
+
+.download_squere > p{
+    font-size: 2rem;
+}
+
+.download_buttons{
+    margin: 2rem;
+    display: none;
+}
+
+.download_buttons > button{
+    padding: 15px;
+    border: 1px solid black;
+    background-color: #72149A;
+    border-radius: 5px;
+}
+
+
+
+#chat{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+}
+
+#if_not_user{
+    margin: auto; 
+    margin-bottom: 2rem; 
+}
+
+#form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: auto;
+}
+
+#chat > #form > input{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#chat > #form > input:focus{ 
+    outline: none;
+    border-bottom: 2px #72149A solid;
+}
+
+#chat > #form > button{
+    width: 20%;
+    padding: 8px;
+    background-color: #72149A;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 80%;
+    color: white;
+} 
+
+#chat > #form> button:hover{
+    background-color: #5c0d7d;
+}
+
+#messages{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 10px;
+    width: 80%;
+    margin: auto;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+#messages > li{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(192, 192, 192);
+    padding: 1rem;
+    width: max-content;
+    max-width: 800px;
+    border-radius: 5px;
+    gap: 0.8rem;
+}
+
+#messages > li >section{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#messages> li > section{
+    font-weight: bold;
+}
+
+#messages > li> section > img{
+    width: 30px;
+    border-radius: 50%;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}

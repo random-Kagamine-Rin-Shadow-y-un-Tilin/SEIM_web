@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+   display: grid;
+   min-height: 100dvh;
+   grid-template-rows: auto 1fr auto;
+}
+
+header{
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    background-color: #A162D8;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1000;
+
+    --icon-togle-menu:url(../svg/menu-svgrepo-com.svg);
+    --transform-menu-show: translate(-100%);
+}
+
+main{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer{
+    background-color: #A162D8;
+    margin-top: 3rem;
+}
+
+.seccions{
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+.logo{
+    z-index: 10;
+}
+
+.logo h1{
+    color: white;
+    font-size: 3rem;
+}
+
+.go_to{
+    display: flex;
+    gap: 2rem;
+}
+
+.go_to > a{
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+}
+
+.user_link > a{
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+}
+
+
+header:has(.nav_input:checked){
+    --icon-togle-menu:url(../svg/close-svgrepo-com.svg);
+    --transform-menu-show: translate (0%);
+}
+
+.nav_input{
+    display: none;
+}
+
+.nav_list{
+    transform: var(--transform-menu-show);
+
+    display: grid;
+    place-content: center;
+    text-align: left;
+    gap: 2rem;
+    position: fixed;
+    list-style: none;
+    background-color: blue;
+    inset: 0;
+    padding: 2rem;
+    background-color: #A162D8;
+
+    transition: .5s transform;
+}
+
+.nav_link{
+    color: white;
+    text-decoration: none;
+}
+
+
+.nav_toggle{
+    cursor: pointer;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    background-image: var(--icon-togle-menu);
+    background-size: cover;
+
+    display: none;
+
+    transition: background-image .3s;
+    color: white;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 2rem;
+    text-wrap: balance;
+    text-align: center;
+    animation: aparecer .5s ease-out forwards;
+}
+
+.subtitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 1.3rem;
+    text-wrap: balance;
+    text-align: center;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

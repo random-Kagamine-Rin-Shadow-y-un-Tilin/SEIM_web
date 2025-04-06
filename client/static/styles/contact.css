@@ -1,0 +1,52 @@
+.card_container{
+    margin-top: 3rem;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    animation: aparecer .5s ease-out forwards;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 250px;
+    height: 450px;
+    border: 2px solid rgb(118, 57, 164);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card > .img > img{
+    width: 250px;
+}
+
+.name{
+    margin: 10px;
+    font-weight: bold;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 10px;
+}
+
+.links > a{
+    color: rebeccapurple;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(118, 57, 164);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.links > a:hover{
+    color: white;
+    background-color: rebeccapurple;
+}

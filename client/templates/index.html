@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles/global.css" />
+    <link rel="stylesheet" href="../static/styles/index.css">
+    <link rel="stylesheet" href="../static/styles/responsive.css" />
+    <script
+      src="https://kit.fontawesome.com/f2f934aa4b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="../static/scripts/client.js"></script>
+    <script src="../static/scripts/user_exist.js" defer></script>
+    <title>SEIM</title>
+  </head>
+  <body>
+    <header>
+
+      <div class="logo">
+        <h1>SEIM</h1>
+      </div>
+
+      <ul class="nav_list">
+
+          <li class="nav_item">
+              <a href="./" class="nav_link">Inicio</a>
+          </li>
+
+          <li class="nav_item">
+              <a href="./about" class="nav_link">Sobre nosotros</a>
+          </li>
+
+          <li class="nav_item">
+              <a href="./contact" class="nav_link">Contanctanos</a>
+          </li>
+
+          <li class="nav_item">
+              <a href="./login" class="nav_link" class="button-user" id="button_burguer">Inicia sesion</a>
+          </li>
+
+      </ul>
+
+      <div class="seccions">
+        <div class="go_to">
+          <a href="/">Inicio</a>
+          <a href="./about">Sobre nosotros</a>
+          <a href="./contact">Contactanos</a>
+      </div>
+
+        <div class="user_link">
+          <a href="./login" id="button" class="button-user">Inicia sesion</a>
+        </div>
+      </div>
+
+      <label class="nav_toggle">
+          <input type="checkbox" id="menu-input" class="nav_input">
+      </label>
+      
+  </header>
+
+    <main>
+      <div class="welcome">
+        <div class="description">
+          <h1>Sistema de Enchufe Inteligente Móvil.</h1>
+          <p>
+            Un enchufe inteligente básico podría brindar soluciones prácticas para el ahorro energético, el control 
+            remoto y la automatización de tareas cotidianas.
+          </p>
+        </div>
+      </div>
+
+      <div class="title">
+        <h1>Conoce más acerca de SEIM</h1>
+      </div>
+
+      <div class="know">
+          <div class="img">
+            <img src="./static/images/enchufe.png" alt="" />
+            <div class="squere"></div>
+            <div class="squere"></div>
+          </div>
+
+          <div class="description">
+            <h1>¿Qué es SEIM?</h1>
+            <p>
+              El<span style="color: rebeccapurple;"> Sistema de Enchufe Inteligente Móvil </span>(SEIM) es una solución basada en Internet de las Cosas (IoT) 
+              que permite el <span style="color: rebeccapurple;">control remoto</span> de dispositivos eléctricos a través de una<span style="color: rebeccapurple;"> aplicación móvil</span>. Este 
+              sistema está diseñado para optimizar el consumo de energía, mejorar la seguridad y proporcionar 
+              comodidad en la gestión de aparatos conectados.
+            </p>
+          </div>
+      </div>
+
+      <div class="how_use">
+        <div class="description">
+          <h1>¿Cómo puedo usarlo?</h1>
+          <p>
+            El uso de SEIM es muy<span style="color: rebeccapurple;"> fácil, práctico y eficiente</span>. Decarga la aplicación móvil, inicia sesión, ve al
+            apartado de dispositivos úbicado en la parte inferior de tu <span style="color: rebeccapurple;">app </span>y vincula tus dispositivos SEIM. <br>
+            Listo, ahora puedes <span style="color: rebeccapurple;">controlar el flujo de energía </span>en tus dispositivos, al igual que poner los horarios 
+            que desees para prender o apagar tus dispositivos SEIM
+          </p>
+        </div>
+
+        <div class="img">
+          <img src="./static/images/mobile-phone.webp" alt="" />
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <div class="title">
+        <h1>Descarga aquí</h1>
+      </div>
+
+      <div class="download">
+        
+
+        <div class="download_squere">
+          <img src="./static/images/codigo-qr.png" alt="" />
+          <p>Escanea este código QR</p>
+        </div>
+
+        <div class="download_buttons">
+          <button>
+            <i class="fa-brands fa-android"></i> Descarga para Android
+          </button>
+        </div>
+      </div>
+
+      <div class="title">
+        <h1>Dejanos saber tu opinión</h1>
+      </div>
+
+      <section id="chat">
+          
+        <div id="if_not_user" style="display: none">
+          Antes inicia sesion para poder comentar
+        </div>
+
+        <form id="form">
+          <input
+            type="text"
+            name="message"
+            id="input"
+            autocomplete="off"
+            placeholder="Haz un comentario..."
+            max="200"
+          />
+          <button type="submit">Publicar</button>
+        </form>
+
+        <ul id="messages"></ul>
+      </section>
+    </main>
+
+    <footer>
+      hola
+    </footer>
+  </body>
+</html>

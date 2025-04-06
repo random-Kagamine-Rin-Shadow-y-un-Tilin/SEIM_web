@@ -1,0 +1,134 @@
+@media (max-width: 1076px) {
+    header{
+        height: 150px;
+    }
+
+    .go_to{
+      display: none;
+    }
+
+    main{
+        margin-top: 150px;
+    }
+
+    .download_squere{
+        display: none;
+    }
+
+    .download_buttons{
+        display: flex;
+    }
+
+    .nav_toggle{
+        display: flex;
+    }
+}
+
+@media (max-width: 1015px) {
+
+    #messages >li{
+        max-width: 600px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    header{
+        height: 100px;
+    }
+
+    main{
+        margin-top: 100px;
+    }
+
+    .title{
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+    }
+
+    .subtitle{
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+    }
+
+    .welcome{
+        justify-content: flex-start;
+    }
+
+    .welcome > .description{
+        width: 100%;
+    }
+
+    .know{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .know > .description{
+        margin: auto;
+        width: 80%;
+    }
+
+    .know > .img > img{
+        height: 150px;
+    }
+
+    .squere{
+      width: 80px;
+      height: 80px;
+    }
+
+    .how_use{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .how_use > .description{
+        margin: auto;
+        width: 80%;
+    }
+
+    .how_use > .img{
+        display: flex;
+    }
+
+    .how_use > .img > img{
+        width: 290px;
+        height: 200px;
+    }
+
+
+
+    #messages >li{
+        max-width: 300px;
+    }
+
+    .problem{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .problem > .description{
+        text-align: center;
+    }
+
+    .objective{
+        flex-direction: column;
+    }
+
+    .achievements{
+        flex-direction: column;
+    }
+
+    .achievements > .obtective_list{
+        margin-bottom: 3rem;
+    }
+
+    .user_link{
+        display: none;
+    }
+}
+

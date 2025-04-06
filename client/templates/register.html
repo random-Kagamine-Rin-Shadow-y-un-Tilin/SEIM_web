@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/register.css">
+    <script src="../static/scripts/animations.js" defer></script>
+    <script type="module" src="../static/scripts/login.js"></script>
+    <title>Inicia Sesion</title>
+</head>
+<body>
+
+    <div class="register_squere">
+
+        <div class="purple_squere right">
+
+            <h1>Empieza tu aventura</h1>
+
+        </div>
+
+        <form id="regiser_form" class="form">
+            <h1>Registrate</h1>
+            <label>Nombre de usuario</label>
+            <input type="text" placeholder="Eliga un nombre de usuario" required id="register_user" maxlength="15">
+            <label>Contraseña</label>
+            <input type="password" placeholder="Eliga una contraseña" required id="register_password">
+            <div class="message">
+                <small id="error_message_register" class="error_message"></small>
+            </div>
+            <div class="button_section">
+                <small class="change">¿Ya tienes cuenta? Inicia sesion</small>
+                <button type="submit">Resgitrate</button>
+            </div>
+        </form>
+
+        <form id="login_form" class="form">
+            <h1>Inicia sesion</h1>
+            <label>Nombre de usuario</label>
+            <input type="text" placeholder="Escriba su nombre de usuario" required id="login_user">
+            <label>Contraseña</label>
+            <input type="password" placeholder="Contraseña" required id="login_password">
+
+            <div class="message">
+                <small class="error_message" id="login_error_message"></small>
+            </div>
+
+            <div class="button_section">
+                <small class="change">¿No tienes cuenta? Registrare</small>
+                <button type="submit">Inicia sesion</button>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+</html>
