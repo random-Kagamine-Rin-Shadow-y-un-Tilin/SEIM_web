@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="content_from_db">
+
+    </div>
+
+
+    <script>
+        const content = document.getElementById('content_from_db')
+        document.addEventListener('DOMContentLoaded',async ()=>{
+            const localUser = JSON.parse(localStorage.getItem('user_SEIM'));
+            const id = localUser.id;
+
+            const response = await fetch('getUser',{
+                method: "POST",
+                headers: {"Content-Type" : "application/json"},
+                body: JSON.stringify({id}),
+            })
+
+            const data = await response.json();
+
+            const user = data.sendUser;
+
+            const element =  `<h1>${user.user_name}</h1><img src='${user.image}'>`
+
+            content.innerHTML = element
+        })
+    </script>
+    
+</body>
+</html>

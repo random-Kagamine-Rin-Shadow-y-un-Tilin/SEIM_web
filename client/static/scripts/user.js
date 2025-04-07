@@ -2,21 +2,33 @@ const localUser = localStorage.getItem('user_SEIM');
 
 const containerUserInfo = document.getElementById('user_info');
 
-document.addEventListener('DOMContentLoaded', ()=>{
+document.addEventListener('DOMContentLoaded', async ()=>{
     if (!localUser){
         window.location.href = "/";
     } else{
 
         const user = JSON.parse(localUser);
-        console.log(user)
+
+        const id = user.id;
+
+        const response = await fetch('getUser',{
+            method: "POST",
+            headers: {"Content-Type" : "application/json"},
+            body: JSON.stringify({id}),
+        })
+
+        const data = await response.json();
+
+        const currentUser = data.sendUser;
 
         let userInfo = `
-        <img src= "${user.image}">
+        <img src= "${currentUser.image}">
 
-        <h1>${user.user_name}</h1>
+        <h1>${currentUser.user_name}</h1>
         `;
 
         containerUserInfo.innerHTML = userInfo;
+
     }
 });
 

@@ -3,10 +3,6 @@
         height: 150px;
     }
 
-    .go_to{
-      display: none;
-    }
-
     main{
         margin-top: 150px;
     }
@@ -19,10 +15,11 @@
         display: flex;
     }
 
-    .nav_toggle{
-        display: flex;
-    }
 }
+
+    .button_section{
+        flex-direction: column;
+    }
 
 @media (max-width: 1015px) {
 
@@ -30,9 +27,26 @@
         max-width: 600px;
     }
 
+    .user_main_content{
+        padding: 2rem;
+        flex-direction: column;
+    }
+
+    #user_info{
+        flex-direction: column;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
+
+    .nav_toggle{
+        display: flex;
+    }
+
+     .go_to{
+      display: none;
+    }
 
     header{
         height: 100px;
@@ -130,5 +144,28 @@
     .user_link{
         display: none;
     }
-}
 
+    .register_squere{
+        display: none;
+    }
+
+    .show{
+        display: flex;
+        
+     }
+
+     .form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+     }
+
+     .form > input{
+        width: 100%;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+
+}

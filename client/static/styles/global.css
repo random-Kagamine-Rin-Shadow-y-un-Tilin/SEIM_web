@@ -63,7 +63,26 @@ footer{
     font-size: 1.3rem;
     color: white;
     text-decoration: none;
+    position: relative;
+    padding: 0 10px;
 }
+
+.go_to > a::after{
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+.go_to > a:hover::after{
+    width: 100%;
+}
+
+
 
 .user_link > a{
     font-size: 1.3rem;

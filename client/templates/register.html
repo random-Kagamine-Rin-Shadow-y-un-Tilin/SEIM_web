@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/styles/register.css">
+    <link rel="stylesheet" href="../static/styles/responsive.css">
     <script src="../static/scripts/animations.js" defer></script>
     <script type="module" src="../static/scripts/login.js"></script>
     <title>Inicia Sesion</title>
@@ -14,7 +15,9 @@
 
         <div class="purple_squere right">
 
-            <h1>Empieza tu aventura</h1>
+            <div class="title">
+                <h1>Empieza tu aventura</h1>
+            </div>
 
         </div>
 
@@ -45,11 +48,45 @@
             </div>
 
             <div class="button_section">
-                <small class="change">¿No tienes cuenta? Registrare</small>
+                <small class="change">¿No tienes cuenta? Registrate</small>
                 <button type="submit">Inicia sesion</button>
             </div>
         </form>
 
+    </div>
+
+    <div class="register_responsive show">
+        <form id="regiser_form_responsive" class="form">
+            <h1>Registrate</h1>
+            <label>Nombre de usuario</label>
+            <input type="text" placeholder="Eliga un nombre de usuario" required id="register_user_responsive" maxlength="15">
+            <label>Contraseña</label>
+            <input type="password" placeholder="Eliga una contraseña" required id="register_password_responsive">
+            <div class="message">
+                <small id="error_message_register_responsive" class="error_message"></small>
+            </div>
+            <div class="button_section">
+                <small class="change_res">¿Ya tienes cuenta? Inicia sesion</small>
+                <button type="submit">Resgitrate</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="login_responsive not_show">
+        <form id="login_form_res" class="form">
+            <h1>Inicia sesion</h1>
+            <label>Nombre de usuario</label>
+            <input type="text" placeholder="Escriba su nombre de usuario" required id="login_user_res" maxlength="15">
+            <label>Contraseña</label>
+            <input type="password" placeholder="contraseña" required id="login_password_res">
+            <div class="message">
+                <small id="error_message_login_res" class="error_message"></small>
+            </div>
+            <div class="button_section">
+                <small class="change_res">¿No tienes cuenta? Registrare</small>
+                <button type="submit">Inicia sesion</button>
+            </div>
+        </form>
     </div>
 
 </body>

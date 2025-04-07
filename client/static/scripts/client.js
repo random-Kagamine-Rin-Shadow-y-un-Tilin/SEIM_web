@@ -8,7 +8,7 @@ function getUser(){
     let user = localStorage.getItem('user_SEIM');
     if(user){
         user = JSON.parse(user);
-        console.log(user);
+
         return user;
     }else{
         user = null;
@@ -30,7 +30,7 @@ socket.on('chat message', (msg, serverOffset, userNme, userImage)=>{
                     <section><img src="${userImage}"> ${userNme}</section>
                     <p>${msg}</p>
                 </li>`;
-    messages.insertAdjacentHTML('beforeend', item);
+    messages.insertAdjacentHTML('afterbegin', item);
     socket.auth.serverOffset = serverOffset;
 })
 

@@ -32,12 +32,21 @@ const db = createClient({
 
 // await db.execute('DROP TABLE comentarios');
 
+// await db.execute('DROP TABLE usuarios')
+
 // await db.execute(`CREATE TABLE comentarios (
 //     id INTEGER PRIMARY KEY AUTOINCREMENT,
 //     usuario_id INTEGER NOT NULL,
 //     contenido TEXT NOT NULL,
 //     FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE
 // );`)
+
+// await db.execute(`CREATE TABLE usuarios (
+//     id INTEGER PRIMARY KEY,
+//     user_name VARCHAR(255) NOT NULL,
+//     password TEXT NOT NULL,
+//     imagen TEXT
+// );`);
 
 io.on('connection', async (socket)=>{
     console.log('usuario conectado')
@@ -126,8 +135,6 @@ app.post("/upload", upload.single("image"), async (req, res) => {
             user_name : req.body.userName
         }
 
-        console.log(newUserSEIM);
-
         res.json({ message: "Imagen subida con éxito", newUser: newUserSEIM });
     } catch (error) {
         console.error(error);
@@ -161,6 +168,7 @@ app.get('/contact', (req, res)=>{
 })
 
 
+
 server.listen(port,()=>{
     console.log(`servidor corriendo en puerto: ${port}`)
 });
@@ -170,3 +178,22 @@ server.listen(port,()=>{
 app.post('/register', registerUser);
 
 app.post('/loginUser', loginUser);
+
+app.post('/getUser',async (req, res) => {
+    const {id} = req.body;
+
+    const result = await db.execute({
+        sql: 'SELECT * FROM usuarios WHERE id = ?',
+        args: [id]
+    })
+
+    const user = result.rows[0];
+
+    const sendUser= {
+        user_name : user.user_name,
+        image : user.imagen
+    }
+
+    return res.json({sendUser})
+
+})

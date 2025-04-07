@@ -1,0 +1,61 @@
+.user_main_content{
+    padding: 5rem;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#user_info{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+#user_info > img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px  rgba(165,39,219,1) solid;
+}
+
+.content_upgrade_image{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.content_upgrade_image > form{
+    display: flex;
+    flex-direction: column;
+    gap :1rem;
+}
+
+.content_upgrade_image >form> button{
+    padding: 10px;
+    width: 100px;
+    background-color: rgba(165,39,219,1);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.content_upgrade_image >form> button:hover{
+    background-color: rgb(128, 20, 174);
+}
+
+#log_out{
+    padding: 10px;
+    width: max-content;
+    background-color: rgb(236, 54, 78);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#log_out:hover{
+    background-color: rgb(180, 34, 53);
+}

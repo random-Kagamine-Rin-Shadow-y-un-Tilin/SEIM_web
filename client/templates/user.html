@@ -3,23 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/user.css">
+    <link rel="stylesheet" href="../static/styles/global.css">
+    <link rel="stylesheet" href="../static/styles/responsive.css">
     <script src="../static/scripts/user.js" defer></script>
+    <script src="../static/scripts/user_exist.js" defer></script>
     <script src="../static/scripts/logout.js" defer></script>
     <title>Usuario</title>
 </head>
 <body>
 
-    <div id="user_info">
-    </div>
+    <header>
 
-    <h1>Actualizar imagen</h1>
+        <div class="logo">
+          <h1>SEIM</h1>
+        </div>
+  
+        <ul class="nav_list">
+  
+            <li class="nav_item">
+                <a href="./" class="nav_link">Inicio</a>
+            </li>
+  
+            <li class="nav_item">
+                <a href="./about" class="nav_link">Sobre nosotros</a>
+            </li>
+  
+            <li class="nav_item">
+                <a href="./contact" class="nav_link">Contanctanos</a>
+            </li>
+  
+            <li class="nav_item">
+                <a href="./login" class="nav_link" class="button-user" id="button_burguer">Inicia sesion</a>
+            </li>
+  
+        </ul>
+  
+        <div class="seccions">
+          <div class="go_to">
+            <a href="/">Inicio</a>
+            <a href="./about">Sobre nosotros</a>
+            <a href="./contact">Contactanos</a>
+            <a href="./login" id="button" class="button-user">Inicia sesion</a>
+        </div>
+  
+        </div>
+  
+        <label class="nav_toggle">
+            <input type="checkbox" id="menu-input" class="nav_input">
+        </label>
+        
+    </header>
 
-    <form id="upload-form" enctype="multipart/form-data">
-        <input type="file" id="image" name="image" accept="image/*">
-        <button type="submit">Subir Imagen</button>
-    </form>
+    <main>
 
-    <button id="log_out">Salir de la sesion</button>
+        <div class="user_main_content">
+
+            <div id="user_info"></div>
+        
+            <div class="content_upgrade_image">
+                <h1>Actualizar imagen</h1>  
+                <form id="upload-form" enctype="multipart/form-data">
+                    <input type="file" id="image" name="image" accept="image/*">
+                    <button type="submit">Subir Imagen</button>
+                </form>      
+                <button id="log_out">Salir de la sesion</button>
+            </div>
+
+        </div>
+        
+
+    </main>
+
+    <footer>
+        poo
+    </footer>
     
 </body>
 </html>
