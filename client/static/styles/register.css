@@ -68,7 +68,6 @@ body{
     position: absolute;
     width: 50%;
     height: 100%;
-    background: rgb(165,39,219);
     background: linear-gradient(126deg, rgba(165,39,219,1) 0%, rgba(118,52,147,1) 50%, rgba(83,4,120,1) 100%);
     top: 0;
     display: flex;
@@ -76,7 +75,8 @@ body{
     align-items: center;
     background-size: 100% 100%;
     transition: left 0.5s ease-in-out;
-    animation: moveGradient 5s infinite linear ;
+    animation: moveGradient 5s infinite linear;
+    z-index: 0;
  } 
 
  .left{
