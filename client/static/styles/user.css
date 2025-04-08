@@ -36,7 +36,7 @@
 
 .content_upgrade_image >form> button{
     padding: 10px;
-    width: 100px;
+    width: max-content;
     background-color: rgba(165,39,219,1);
     border: none;
     border-radius: 8px;

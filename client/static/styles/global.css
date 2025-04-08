@@ -2,7 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Host Grotesk', sans-serif;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('../fonts/HostGrotesk-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body{
@@ -37,6 +44,8 @@ main{
 footer{
     background-color: #A162D8;
     margin-top: 3rem;
+    padding: 2rem;
+    display: flex;
 }
 
 .seccions{
@@ -49,9 +58,9 @@ footer{
     z-index: 10;
 }
 
-.logo h1{
-    color: white;
-    font-size: 3rem;
+.logo img{
+    padding: 10px;
+    height: 120px;
 }
 
 .go_to{
@@ -147,6 +156,7 @@ header:has(.nav_input:checked){
     text-wrap: balance;
     text-align: center;
     animation: aparecer .5s ease-out forwards;
+    font-weight: 600;
 }
 
 .subtitle{
@@ -158,6 +168,10 @@ header:has(.nav_input:checked){
     font-size: 1.3rem;
     text-wrap: balance;
     text-align: center;
+}
+
+button{
+    font-weight: 400;
 }
 
 @keyframes aparecer {

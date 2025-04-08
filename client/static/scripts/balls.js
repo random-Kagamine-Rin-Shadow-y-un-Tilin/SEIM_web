@@ -38,7 +38,10 @@ class Ball {
 let bolas = []
 
 for(let i =0; i<20; i++){
-    bolas.push(new Ball(canvas.width /2, canvas.height /2));
+
+    let positionX = Math.floor(Math.random() * 350);
+    let positiony = Math.floor(Math.random() * 350);
+    bolas.push(new Ball(positionX, positiony));
 }
 
 function animar(){
