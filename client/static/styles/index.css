@@ -131,7 +131,7 @@
     display: none;
 }
 
-.download_buttons > button{
+.download_buttons > a{
     padding: 15px;
     border: 1px solid black;
     background-color: #72149A;

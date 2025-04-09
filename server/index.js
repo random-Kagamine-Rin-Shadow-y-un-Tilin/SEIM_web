@@ -167,6 +167,10 @@ app.get('/contact', (req, res)=>{
     res.sendFile(process.cwd()+ '/client/templates/contact.html');
 })
 
+app.get('/terms', (req, res)=>{
+    res.sendFile(process.cwd()+ '/client/templates/terms.html');
+})
+
 
 
 server.listen(port,()=>{

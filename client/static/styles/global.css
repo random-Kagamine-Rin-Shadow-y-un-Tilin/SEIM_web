@@ -46,6 +46,25 @@ footer{
     margin-top: 3rem;
     padding: 2rem;
     display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+footer > .inc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer > .inc > img{
+    width: 25px;
+    height: 25px;
+}
+
+footer > .links_term > a{
+    color: white;
 }
 
 .seccions{
@@ -122,7 +141,6 @@ header:has(.nav_input:checked){
     inset: 0;
     padding: 2rem;
     background-color: #A162D8;
-
     transition: .5s transform;
 }
 

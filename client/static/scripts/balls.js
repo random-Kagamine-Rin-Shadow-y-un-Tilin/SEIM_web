@@ -1,8 +1,13 @@
-const canvas = document.querySelector('.purple_squere');
+const canvas = document.querySelector('canvas');
 const ctx = canvas.getContext('2d');
 
-canvas.width = canvas.offsetWidth;
-canvas.height = canvas.offsetHeight;
+function resizeCanvas() {
+    const bounds = canvas.getBoundingClientRect();
+    canvas.width = bounds.width;
+    canvas.height = bounds.height;
+}
+
+resizeCanvas(); 
 
 class Ball {
     constructor(x,y){
@@ -11,7 +16,7 @@ class Ball {
         this.radio = 10;
         this.dirX = Math.random() * 2 -1;
         this.dirY = Math.random() * 2 -1;
-        this.speed = 3;
+        this.speed = 2.5;
     }
 
     draw(){
@@ -59,7 +64,7 @@ function animar(){
             let dy= bola2.y - bola.y; 
             let dist = Math.sqrt(dx ** 2 + dy ** 2);
 
-            if(dist < 100){
+            if(dist < 80){
                 ctx.beginPath();
                 ctx.moveTo(bola.x, bola.y);
                 ctx.lineTo(bola2.x, bola2.y);
